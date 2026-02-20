@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment</title>
 
+<style>
+body{
+  font-family: Arial;
+  padding:20px;
+}
+
+.method{
+  margin:10px 0;
+}
+
+.section{
+  display:none;
+  margin-top:15px;
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+button{
+  margin-top:15px;
+  padding:10px 20px;
+  background:green;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+</style>
+
+<script>
+function showPayment(){
+  let card = document.getElementById("card").checked;
+  let upi = document.getElementById("upi").checked;
+  let cod = document.getElementById("cod").checked;
+
+  document.getElementById("cardDetails").style.display = card ? "block" : "none";
+  document.getElementById("upiDetails").style.display = upi ? "block" : "none";
+  document.getElementById("codDetails").style.display = cod ? "block" : "none";
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Select Payment Method</h2>
+<button 
+    onclick="window.location.href='success.html'">
+    Pay Now
+</button>
+
+<div class="method">
+<input type="radio" name="pay" id="card" onclick="showPayment()"> Card
+<input type="radio" name="pay" id="upi" onclick="showPayment()"> UPI
+<input type="radio" name="pay" id="cod" onclick="showPayment()"> COD
+</div>
+
+<div id="cardDetails" class="section">
+<h3>Card Details</h3>
+<input type="text" placeholder="Card Number"><br><br>
+<input type="text" placeholder="Expiry Date"><br><br>
+<input type="text" placeholder="CVV">
+</div>
+
+<div id="upiDetails" class="section">
+<h3>UPI Details</h3>
+<input type="text" placeholder="Enter UPI ID">
+</div>
+
+<div id="codDetails" class="section">
+<h3>Cash on Delivery</h3>
+<p>You will pay when product is delivered.</p>
+</div>
+
+<button>Pay Now</button>
+
+</body>
+</html>
+<form>
