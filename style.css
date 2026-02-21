@@ -1862,16 +1862,17 @@ button:hover {
   background-color: #e6005c;
 }
 </style>
-.cart-btn {
+a {
+  display: inline-block;
   background-color: #ff4d88;
   color: white;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 25px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 8px;
   font-weight: bold;
-  cursor: pointer;
 }
 
-.cart-btn:hover {
+ a:hover {
   background-color: #e6005c;
 }
