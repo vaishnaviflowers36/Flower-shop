@@ -1848,3 +1848,17 @@ html, body{
   font-size: 18px;
 }
 </style>
+<style>
+button {
+  background-color: #ff4d88;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e6005c;
+}
+</style>
